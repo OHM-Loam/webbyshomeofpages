@@ -53,3 +53,24 @@ address {
     font-style: normal;
     display: block;
 }
+/* Specific styles for the Personal Info page */
+.personal-page {
+    background-image: url('images/backgroundpaper.gif');
+    background-color: #f0e6d2; /* Fallback tan color */
+    color: #000000;
+}
+
+.personal-page a:link { color: #008040; }    /* Green links */
+.personal-page a:visited { color: #000080; } /* Navy links */
+
+.photo-grid {
+    margin: 30px 0;
+    padding: 15px;
+    border: 1px double #333;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.footer-nav {
+    margin-top: 50px;
+    padding-bottom: 30px;
+}
