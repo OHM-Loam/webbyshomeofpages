@@ -149,3 +149,12 @@ blockquote {
     text-decoration: none;
     font-weight: bold;
 }
+.brand-links img {
+    margin: 20px 0;
+    border: 2px solid #000;
+    transition: transform 0.2s;
+}
+
+.brand-links img:hover {
+    transform: scale(1.05); /* A modern touch for the 90s images */
+}
