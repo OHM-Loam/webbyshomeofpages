@@ -1,0 +1,32 @@
+/* This makes the page readable without changing your original HTML */
+
+body {
+    /* Sets a max-width so the text doesn't stretch across the whole screen */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    
+    /* Improves the font - standard Mac fonts look great here */
+    font-family: "Times New Roman", Times, serif; 
+    line-height: 1.6;
+    
+    /* Keeps your original black background */
+    background-color: #000000; 
+}
+
+/* Gives your images a little breathing room so text doesn't touch them */
+img {
+    margin: 10px;
+    max-width: 100%; /* Prevents huge images from breaking the layout */
+    height: auto;
+}
+
+/* Makes those old paragraphs easier to read */
+p {
+    margin-bottom: 20px;
+}
+
+/* Keeps your original link colors from the body tag but makes them clearer */
+a {
+    text-decoration: underline;
+}
