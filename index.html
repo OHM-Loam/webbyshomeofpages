@@ -2,132 +2,87 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webby's Home of Pages - Main Page</title>
+    <title>Webby's home of pages - Main Page</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* CSS to replace the old body attributes and center tags */
-        body {
-            background-color: #000000;
-            color: #8c5e1e;
-            font-family: sans-serif;
-            line-height: 1.6;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-        }
-        a { color: #0000ff; }
-        a:visited { color: #ff0000; }
-        
-        .section-spacer { margin: 50px 0; }
-        .bloodbar { display: block; margin: 20px auto; }
-        .flex-row { display: flex; justify-content: space-between; align-items: center; margin: 20px 0; }
-        img { max-width: 100%; height: auto; }
-        
-        .button-game {
-            background: #111;
-            padding: 20px;
-            border: 1px solid #8c5e1e;
-            margin-top: 40px;
-        }
-    </style>
 </head>
 <body>
 
-    <header>
-        <div class="flex-row">
-            <img src="flame.gif" alt="flame">
-            <img src="titlehomepagetitleblkback.gif" alt="Webby's pages">
-            <img src="flame.gif" alt="flame">
-        </div>
-        <img src="titlewelcomeblkback.gif" alt="Welcome!">
-    </header>
+<center>
+    <img src="flame.gif" align="left">
+    <img src="flame.gif" align="right">
+    <img src="titlehomepagetitleblkback.gif" alt="Webby's pages"><br>
+    <img src="titlewelcomeblkback.gif" alt="Welcome!">
 
-    <main>
-        <section class="flex-row">
-            <img src="Mark3.jpg" alt="Me - 1997 National Championships">
-            <img src="postcard4.jpg" alt="The Slayer">
-        </section>
-
-        <p>This page is your guide through the rough and tumble world of both mountain bike racing and vampire slaying. What do they have in common you ask? Nothing, except I am a mountainbiker with a rather morbid fascination with vampires!</p>
-
-        <div class="section-spacer">
-            <a href="http://Fox.nstn.ca/~nstn4356/personal%20info%20page.html">
-                <img src="canada.gif" alt="Canada Flag">
-            </a>
-            <p>My name is Mark Webster. I am a 24 year old student in Halifax, Nova Scotia. Click the flag to get the skinny.</p>
-        </div>
-
-        <img src="bloodbar.gif" class="bloodbar" alt="divider">
-
-        <section>
-            <div class="flex-row">
-                <img src="buffy_d1.jpg" alt="Sarah Michelle Gellar">
-                <img src="buffy2sm.jpg" alt="Buffy the Vampire Slayer">
-            </div>
-            <p>On your right is Buffy Summers. On the left is Sarah Michelle Gellar. Click below for my Buffy page.</p>
-            <a href="http://Fox.nstn.ca/~nstn4356/Buffy%20page.html">
-                <img src="buffyprint.gif" alt="My Buffy Page">
-            </a>
-        </section>
-
-        <img src="bloodbar.gif" class="bloodbar" alt="divider">
-
-        <section class="section-spacer">
-            <a href="http://Fox.nstn.ca/~nstn4356/MTB.html">
-                <img src="brutsaert_msa96.jpg" alt="My Mountainbike pages">
-            </a>
-            <p>Mountainbiking has been a passion of mine for almost a decade. Click the pic to explore!</p>
-        </section>
-
-        <div class="button-game">
-            <p>Don't push this button more than once!</p>
-            <form name="buttons" onsubmit="return false">
-                <input type="button" value="Push Me" id="pushmeBtn">
-                <input type="text" id="myoutxt" value=" " size="40" readonly>
-            </form>
-        </div>
-    </main>
-
-    <footer>
-        <address>
-            Maintained by <a href="mailto:nstn4356@fox.nstn.ca">Mark Webster</a><br>
-            Last updated Sunday, Dec. 28, 1997
-        </address>
-    </footer>
-
-    <script>
-        const remarks = [
-            "Thanks!", "Once is enough!", "Are you deaf?", 
-            "Go push someone elses button!", "SOMEBODY STOP THIS GUY!", 
-            "I give up. Please stop.", "I SAID PLEASE!", 
-            "Stop harassing me!", "This is NOT funny!", 
-            "I give up.", "LAST WARNING!!!!"
-        ];
+    <div class="content-wrapper">
+        <img src="Mark3.jpg" align="left" alt="Me - 1997 National Championships">
+        <img src="postcard4.jpg" align="right" alt="The Slayer">
         
-        let currentIndex = 0;
-        const btn = document.getElementById('pushmeBtn');
-        const output = document.getElementById('myoutxt');
+        <p>This page is your guide through the rough and tumble world of both mountain bike racing and vampire slaying. What do they have in common you ask? Nothing, except I am a mountainbiker with a rather morbid fascination with vampires! I recently dislocated my shoulder while training and have been turned into a couch potato. This has given me a little to much time on my hands. These pages are the result. However, I will be going back to school this January/98 and these pages will inevitably self destruct. Or at least suffer a little neglect.</p>
 
-        btn.addEventListener('click', () => {
-            if (currentIndex < remarks.length) {
-                output.value = remarks[currentIndex];
-                
-                if (currentIndex === remarks.length - 2) {
-                    alert("Dear Sir or Madam:\n\nIt has come to our attention that you have been harassing one of our buttons...");
-                }
-                
-                if (currentIndex === remarks.length - 1) {
-                    window.history.back();
-                }
-                
-                currentIndex++;
-            } else {
-                currentIndex = 0;
-                output.value = remarks[0];
-            }
-        });
-    </script>
+        <a href="http://Fox.nstn.ca/~nstn4356/personal%20info%20page.html">
+            <img src="canada.gif" align="left">
+        </a>
+        <p>My name is Mark Webster. I am a 24 year old student currently residing in Halifax, Nova Scotia Canada. Want to know more about me? Then click the Canadian flag to get the skinny.</p>
+
+        <img src="bloodbar.gif" class="divider">
+
+        <img src="buffy_d1.jpg" align="left" alt="Sarah Michelle Gellar">
+        <img src="buffy2sm.jpg" align="right" alt="Buffy the Vampire Slayer">
+        <p>On your right is the one and only vampire slayer Buffy Summers. The pic on the left is Buffy in real life - Sarah Michelle Gellar. Click below to enter my page dedicated to the hit show Buffy The Vampire Slayer.</p>
+        <a href="http://Fox.nstn.ca/~nstn4356/Buffy%20page.html">
+            <img src="buffyprint.gif" alt="My Buffy Page">
+        </a>
+
+        <img src="bloodbar.gif" class="divider">
+
+        <a href="http://Fox.nstn.ca/~nstn4356/MTB.html">
+            <img src="brutsaert_msa96.jpg" align="left" alt="My Mountainbike pages">
+        </a>
+        <p>Mountainbiking and cycling in general have been a passion of mine for almost a decade now. I have been racing for the past 3 years. Click on the pic and explore my Mountainbike page!</p>
+
+        <a href="http://Fox.nstn.ca/~nstn4356/snowboarding.html">
+            <img src="control1ani.gif" align="right" alt="Ride!">
+        </a>
+        <p>I am learning to snowboard this winter! I was an avid skier for most of my life up to a few years ago. I just plain burnt out of it. I am hoping that snowboarding will reintroduce me to the mountains. Click the picture of my new board and go riding!</p>
+
+        <img src="bloodbar.gif" class="divider">
+        <img src="titlefavouritelinksblkback.gif" alt="favourite links">
+
+        <p><a href="http://Fox.nstn.ca/~nstn4356/Buffy%20page.html">Buffy The Vampire Slayer Links</a></p>
+        <a href="http://www.cat.nyu.edu/tkbalt/salingers/"><img src="po5.gif" alt="Pof 5"></a>
+        <p><a href="http://home.att.net/~TucketInn">The Page That Hooks You Up</a></p>
+        <p><a href="http://www.brain.com/welcome.html">The Braintainment Center</a></p>
+        <p><a href="http://Fox.nstn.ca/~nstn4356/MTB.html">Mountain Bike Links</a></p>
+        <p><a href="http://Fox.nstn.ca/~nstn4356/snowboarding.html">Snowboard Links</a></p>
+        <p><a href="http://www.tiac.net/users/carp29/spark.htm"><img src="kennydead.gif" alt="'They killed Kenny!'"></a></p>
+        <p><a href="http://www.policescanner.com/">Welcome To Police Scanner.com</a></p>
+        <p><a href="http://fox.nstn.ca/~rennie/">The Young's Home page</a> (my friend Rennie Young's homepage)</p>
+        <p><a href="http://www.bartab.com/drinks/drinks.html">Drink of the Week!</a></p>
+        <p><a href="http://www.pathwaytodarkness.com/fiction/reviews/index.shtml">Vampire Books</a></p>
+        <p>Are you a fan of Bill Gates? Or do you despise him? Whatever the case go <a href="http://205.243.221.9/game.html">here!</a></p>
+        <p><a href="http://www.wescraven.com/"><img src="s2poster.jpg" alt="'Its a scream, baby!'"></a></p>
+        <p>Are you a Scream Fan? Click above and Scream again! Click below for more Wes Craven madness!!!</p>
+        <a href="http://pw1.netcom.com/~jasman15/iknow.html"><img src="iknowwhatyoudidheader.gif"></a>
+
+        <p>Comments, questions and general banter welcome!</p>
+        <a href="mailto:nstn4356@fox.nstn.ca"><img src="emailme.gif" alt="E-me!"></a>
+        <br>
+        <img src="cgreet.gif" alt="Merry X-mas">
+
+        <p>Don't push this button more than once!</p>
+        <form name="buttons" method="post" onSubmit="return false">
+            <input type="button" name="pushme" value="Push Me" onClick="compute(this.form)">
+            <input type="text" value=" " name="myoutxt" size=40>
+        </form>
+
+        <address>
+            This page is maintained by <a href="http://Fox.nstn.ca/~nstn4356/">Mark Webster</a> 
+            (<a href="mailto:nstn4356@fox.nstn.ca">nstn4356@fox.nstn.ca</a>)<br>
+            Last updated Sunday, Dec. 28/1997
+        </address>
+    </div>
+</center>
+
+<script src="script.js"></script>
 </body>
 </html>
