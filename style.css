@@ -194,3 +194,10 @@ blockquote {
     border: 1px solid #333;
     margin-right: 1px;
 }
+.retro-counter {
+    margin-top: 50px; /* Adjust this number to add more or less space */
+    display: inline-block;
+    background: #000;
+    padding: 5px;
+    border: 2px outset #666;
+}
