@@ -158,3 +158,22 @@ blockquote {
 .brand-links img:hover {
     transform: scale(1.05); /* A modern touch for the 90s images */
 }
+.midi-controls {
+    margin: 20px 0;
+}
+
+.midi-controls button {
+    background: #4a0000; /* Dark blood red */
+    color: #ffffff;
+    border: 2px outset #8c5e1e; /* Gold/brown border */
+    padding: 10px 20px;
+    font-family: "Courier New", Courier, monospace;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.midi-controls button:hover {
+    background: #ff0000; /* Bright red on hover */
+    border-style: inset;
+}
