@@ -69,11 +69,14 @@
         <br>
         <img src="cgreet.gif" alt="Merry X-mas">
 
-        <p>Don't push this button more than once!</p>
-        <form name="buttons" method="post" onSubmit="return false">
-            <input type="button" name="pushme" value="Push Me" onClick="compute(this.form)">
-            <input type="text" value=" " name="myoutxt" size=40>
-        </form>
+        <div class="button-game">
+    <p>Don't push this button more than once!</p>
+    
+    <form name="buttons" onsubmit="return false">
+        <input type="button" value="Push Me" id="pushmeBtn">
+        <input type="text" id="myoutxt" value=" " size="40">
+    </form>
+</div>
 
         <address>
             This page is maintained by <a href="http://Fox.nstn.ca/~nstn4356/">Mark Webster</a> 
@@ -82,7 +85,57 @@
         </address>
     </div>
 </center>
+<script>
+    // The list of "complaints" the button gives
+    const remarks = [
+        "Thanks!",
+        "Once is enough!",
+        "Are you deaf?",
+        "Go push someone elses button!",
+        "SOMEBODY STOP THIS GUY!",
+        "I give up. Please stop.",
+        "I SAID PLEASE, WHAT'S WRONG WITH YOU!",
+        "Stop harassing me!",
+        "This is NOT funny!",
+        "I give up.",
+        "LAST WARNING!!!!"
+    ];
 
-<script src="script.js"></script>
+    let currentStep = -1; // Starts at -1 so first click is index 0
+    const btn = document.getElementById('pushmeBtn');
+    const output = document.getElementById('myoutxt');
+
+    // Function to handle the button click
+    btn.addEventListener('click', () => {
+        currentStep++;
+
+        // 1. Check if we are at the "Legal Letter" phase (Second to last remark)
+        if (currentStep === remarks.length - 2) {
+            alert("Dear Sir or Madam:\n\nIt has come to our attention that you have been harassing one of the buttons on the web. Although most buttons are understanding about this type of thing (being repeatedly pressed), some rogue buttons have decided to form a support group...\n\nIF YOU PERSIST PRESSING THIS BUTTON, YOU WILL BE EJECTED FROM THIS SCREEN.\n\n- The Federation for Oppressed and Abused Buttons");
+        }
+
+        // 2. Check if we hit the "Eject" phase (The very last remark)
+        if (currentStep === remarks.length - 1) {
+            output.value = remarks[currentStep];
+            setTimeout(() => {
+                alert("LAST WARNING!!!!");
+                window.history.back(); // This "ejects" them to the previous page
+            }, 500);
+            return;
+        }
+
+        // 3. Reset if they keep going somehow, otherwise show the next remark
+        if (currentStep >= remarks.length) {
+            currentStep = 0;
+        }
+        
+        output.value = remarks[currentStep];
+    });
+
+    // Prevents people from typing in the text box
+    output.addEventListener('input', () => {
+        output.value = "Do not type here!";
+    });
+</script>
 </body>
 </html>
