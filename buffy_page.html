@@ -8,11 +8,14 @@
 <body>
 
 <center>
-    <embed src="images/buffy_theme.mid" autostart="true" loop="true" width="2" height="0">
 
     <header>
         <img src="images/buffyban.gif" alt="Buffy Banner"><br>
         <img src="images/angelandbuffy.gif" alt="Angel and Buffy">
+        <div class="midi-controls">
+    <button onclick="MIDIjs.play('images/buffy_theme.mid');">Play Theme Song</button>
+    <button onclick="MIDIjs.stop();">Stop Music</button>
+</div>
     </header>
 
     <div class="content-wrapper">
