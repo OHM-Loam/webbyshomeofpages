@@ -1,7 +1,5 @@
 /* This makes the page readable without changing your original HTML */
-
 body {
-    /* Sets a max-width so the text doesn't stretch across the whole screen */
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
@@ -10,23 +8,48 @@ body {
     font-family: "Times New Roman", Times, serif; 
     line-height: 1.6;
     
-    /* Keeps your original black background */
+    /* Keeps original black background and brown text color */
     background-color: #000000; 
+    color: #8c5e1e;
 }
 
-/* Gives your images a little breathing room so text doesn't touch them */
+/* Original link colors from your body tag */
+a:link { color: #0000ff; }
+a:vlink { color: #ff0000; }
+a:alink { color: #ffff00; }
+a { text-decoration: underline; }
+
+/* Gives images breathing room and handles your align="left/right" tags */
 img {
     margin: 10px;
-    max-width: 100%; /* Prevents huge images from breaking the layout */
+    max-width: 100%;
     height: auto;
+}
+
+img[align="left"] {
+    margin-right: 20px;
+}
+
+img[align="right"] {
+    margin-left: 20px;
+}
+
+/* Style for the bloodbar dividers */
+.divider {
+    display: block;
+    margin: 40px auto;
+    clear: both;
 }
 
 /* Makes those old paragraphs easier to read */
 p {
     margin-bottom: 20px;
+    clear: both; /* Prevents text from getting trapped between images */
 }
 
-/* Keeps your original link colors from the body tag but makes them clearer */
-a {
-    text-decoration: underline;
+/* Ensures the footer/address stays at the bottom */
+address {
+    margin-top: 50px;
+    font-style: normal;
+    display: block;
 }
