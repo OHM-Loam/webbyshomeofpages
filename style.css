@@ -226,3 +226,21 @@ blockquote {
     border: 4px outset #666 !important;
     background-color: #000 !important;
 }
+table {
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Adds a dark tint so text pops */
+    border: 2px solid #9370DB;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #444;
+}
+
+/* This targets the purple cells specifically */
+td[bgcolor="#9370DB"] {
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    width: 150px;
+}
