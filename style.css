@@ -195,23 +195,19 @@ blockquote {
     padding: 5px;
     border: 2px outset #666;
 }
-/* Container for the grid */
 .character-grid {
-    display: flex;             /* Lines items up horizontally */
-    justify-content: center;   /* Centers the group on the page */
-    align-items: center;       /* Aligns them vertically */
-    gap: 15px;                 /* Space between the images */
-    flex-wrap: nowrap;         /* Forces them to stay on one line */
-    width: 100%;
-    overflow-x: auto;          /* Adds a scrollbar if the screen is too small */
+    text-align: center;      /* Centers the line of images */
+    white-space: nowrap;     /* Forces them to stay on one line */
+    padding: 20px 0;
 }
 
-/* Sizing the images within the links */
-.character-grid a img {
-    width: 150px;              /* Set a consistent width */
-    height: 200px;             /* Set a consistent height */
-    object-fit: cover;         /* This is key: it crops the image to fit without stretching */
-    border-radius: 8px;        /* Optional: adds nice rounded corners */
-    display: block;            /* Removes weird bottom gaps */
-    border: 2px solid #ccc;    /* Optional: adds a frame */
+.character-grid a {
+    display: inline-block;   /* Keeps them side-by-side */
+    margin: 0 5px;           /* Adjust this for more/less space between them */
+}
+
+.character-grid img {
+    width: 120px;            /* Pick one width for all */
+    height: auto;            /* Lets the height adjust naturally */
+    vertical-align: middle;  /* Keeps them aligned if heights vary slightly */
 }
