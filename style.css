@@ -168,3 +168,10 @@ blockquote {
 .hobby-section img[align="right"] {
     margin-left: 25px;
 }
+.container {
+    width: 650px; /* This was the "sweet spot" width for 1990s web design */
+    margin: 0 auto;
+    background-color: #000000;
+    padding: 20px;
+    border: 1px solid #333; /* Optional: adds a slight "page" feel */
+}
