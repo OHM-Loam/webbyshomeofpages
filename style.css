@@ -194,20 +194,24 @@ blockquote {
     background: #000;
     padding: 5px;
     border: 2px outset #666;
-}
 .character-grid {
-    text-align: center;      /* Centers the line of images */
-    white-space: nowrap;     /* Forces them to stay on one line */
-    padding: 20px 0;
+    display: flex;
+    justify-content: space-around; /* Distributes them evenly */
+    align-items: flex-end;         /* Aligns them at the bottom */
+    width: 100%;                   /* Keeps it within the screen */
+    max-width: 1200px;             /* Prevents them from getting TOO huge on wide screens */
+    margin: 0 auto;                /* Centers the whole grid */
+    overflow: hidden;              /* Guaranteed no scroll bar */
 }
 
 .character-grid a {
-    display: inline-block;   /* Keeps them side-by-side */
-    margin: 0 5px;           /* Adjust this for more/less space between them */
+    flex: 1;                       /* Gives each character equal "weight" */
+    max-width: 15%;                /* Forces them to stay small enough for 1 line */
+    margin: 0 5px;                 /* Tiny gap between them */
 }
 
 .character-grid img {
-    width: 120px;            /* Pick one width for all */
-    height: auto;            /* Lets the height adjust naturally */
-    vertical-align: middle;  /* Keeps them aligned if heights vary slightly */
+    width: 100%;                   /* Scales image to the size of the link */
+    height: auto;                  /* Keeps the proportions correct */
+    display: block;
 }
