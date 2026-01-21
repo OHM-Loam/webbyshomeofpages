@@ -136,18 +136,20 @@ blockquote {
     width: auto;       /* Keeps it at its original size */
 }
 
-/* 4. LISTS & LINKS */
-.buffy-links {
-    list-style: none !important; /* Forces the bullets to stay hidden */
+/* 4. LISTS & LINKS - Universal Reset */
+.buffy-links, 
+.link-list {
+    list-style: none !important;
     list-style-type: none !important;
-    padding-left: 0;             /* Removes the space where bullets usually sit */
-    margin-left: 0;
-    text-align: center;          /* Keeps links centered if that's the look you want */
+    padding: 0;
+    margin: 0;
+    text-align: center;
 }
 
-.buffy-links li {
-    margin-bottom: 12px;         /* Adds a nice gap between the links */
-    display: block;              /* Ensures each link is on its own line */
+.buffy-links li, 
+.link-list li {
+    margin-bottom: 10px;
+    display: block;
 }
 
 .hobby-section {
@@ -244,3 +246,5 @@ td[bgcolor="#9370DB"] {
     text-align: center;
     width: 150px;
 }
+
+
