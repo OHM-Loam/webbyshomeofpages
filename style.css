@@ -180,3 +180,37 @@ blockquote {
     padding: 20px;
     border: 1px solid #333; /* Optional: adds a slight "page" feel */
 }
+/* 7. FAMILY PHOTO GALLERY */
+.photo-gallery {
+    text-align: center;
+    margin-top: 30px;
+    clear: both;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+    gap: 15px;                             /* Space between photos */
+    margin-top: 10px;
+}
+
+.gallery-grid img {
+    width: 100%;             /* Fills the grid square */
+    height: 150px;           /* Forces them to all be the same height */
+    object-fit: cover;       /* Crops them neatly so they don't look squished */
+    border: 3px outset #ccc; /* Classic beveled photo frame look */
+    transition: transform 0.2s;
+    margin: 0;               /* Resets global image margins */
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);  /* Slight "pop" when you hover over them */
+    border-color: #8c5e1e;
+}
+
+/* On mobile phones, show them 2 per row instead of 3 */
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
