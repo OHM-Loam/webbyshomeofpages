@@ -124,3 +124,14 @@ blockquote {
     padding: 10px 20px;
     cursor: pointer;
 }
+/* This allows the text to actually sit between the images */
+.wrapped-text {
+    clear: none !important; 
+    display: inline; /* Keeps it from acting like a big block that pushes things away */
+}
+
+/* Ensure the images don't overlap on small screens */
+img[align="left"], img[align="right"] {
+    max-width: 40%; /* Adjust this percentage if the photos are too big/small */
+    height: auto;
+}
