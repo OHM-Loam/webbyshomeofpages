@@ -196,26 +196,23 @@ blockquote {
     border: 2px outset #666;
     
 .character-grid {
-    display: flex;          /* The modern way to align items in a row */
-    flex-wrap: nowrap;      /* FORCES them to stay on one line (no wrapping) */
-    justify-content: center;/* Centers the row */
-    align-items: flex-end;  /* Keeps them aligned at the bottom */
-    width: 100%;            /* Keeps the grid within the screen width */
-    gap: 10px;              /* Adjust this to change the space between images */
-    overflow: hidden;       /* Ensures no scrollbars appear */
+    text-align: center;      /* Centers the line of images */
+    white-space: nowrap;     /* The "Magic" line: prevents them from ever jumping to row 2 */
+    width: 100%;             /* Fits the screen width */
+    font-size: 0;            /* Removes the tiny natural gap between inline images */
 }
 
 .character-grid a {
-    flex: 1 1 auto;         /* Allows links to grow and shrink equally */
-    min-width: 0;           /* Prevents the images from 'pushing' the box wider */
-    max-width: 150px;       /* Keeps them from getting too huge on big screens */
+    display: inline-block;   /* Keeps them side-by-side like the original */
+    width: 14%;              /* 100% divided by 6 characters is ~16%, 14% leaves a little gap */
+    margin: 0 1%;            /* Adds a tiny bit of breathing room */
+    vertical-align: bottom;  /* Keeps their feet on the same 'ground' line */
 }
 
 .character-grid img {
-    width: 100%;            /* Image fills the <a> tag width */
-    height: auto;           /* Maintains original proportions */
-    display: block;         /* Removes the tiny gap at the bottom of images */
-    object-fit: contain;    /* Ensures the whole image is visible */
+    width: 100%;             /* Makes the image fill the 14% width of the link */
+    height: auto;            /* Keeps the faces from getting squashed */
+    border: 0;               /* Removes any default blue borders from links */
 }
     .buffy-links {
     list-style-type: none; /* This removes the actual bullet dots */
