@@ -151,22 +151,27 @@ blockquote {
 }
 
 .hobby-section {
-    margin-bottom: 40px; /* This creates the space between the two sections */
-    padding: 10px 0;
+    display: flex;          /* The modern magic */
+    align-items: center;    /* This centers the text vertically next to the image */
+    margin-bottom: 50px;
+    gap: 30px;              /* Creates the space between the image and text */
+    text-align: left;       /* Keeps the text looking clean */
+}
+
+/* This handles the "Right Aligned" sections (like Snowboarding) */
+.hobby-section.reverse {
+    flex-direction: row-reverse; 
 }
 
 .hobby-section p {
-    padding-top: 15px;    /* Aligns the text better with the middle of the image */
-    font-size: 1.1rem;    /* Makes the typing feel a bit more spaced out */
+    margin: 0;              /* Removes extra spacing that might ruin the centering */
+    flex: 1;                /* Allows the text to take up the remaining space */
 }
 
-/* Ensure these images don't get too close to the text */
-.hobby-section img[align="left"] {
-    margin-right: 25px;
-}
-
-.hobby-section img[align="right"] {
-    margin-left: 25px;
+.hobby-section img {
+    max-width: 150px;       /* Keeps your hobby images a consistent size */
+    height: auto;
+    flex-shrink: 0;         /* Prevents the image from getting squashed */
 }
 .container {
     width: 650px; /* This was the "sweet spot" width for 1990s web design */
