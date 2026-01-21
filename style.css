@@ -135,3 +135,17 @@ blockquote {
     clear: both;       /* Forces it to stay below all floating images */
     width: auto;       /* Keeps it at its original size */
 }
+
+/* 4. LISTS & LINKS */
+.buffy-links {
+    list-style: none !important; /* Forces the bullets to stay hidden */
+    list-style-type: none !important;
+    padding-left: 0;             /* Removes the space where bullets usually sit */
+    margin-left: 0;
+    text-align: center;          /* Keeps links centered if that's the look you want */
+}
+
+.buffy-links li {
+    margin-bottom: 12px;         /* Adds a nice gap between the links */
+    display: block;              /* Ensures each link is on its own line */
+}
