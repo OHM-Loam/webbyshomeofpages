@@ -129,3 +129,9 @@ blockquote {
 .midi-controls button:hover {
     background: #ff0000;
 }
+.divider {
+    display: block;
+    margin: 30px auto; /* Centers it and adds space above/below */
+    clear: both;       /* Forces it to stay below all floating images */
+    width: auto;       /* Keeps it at its original size */
+}
