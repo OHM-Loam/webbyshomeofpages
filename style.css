@@ -217,3 +217,12 @@ blockquote {
     display: block;         /* Removes the tiny gap at the bottom of images */
     object-fit: contain;    /* Ensures the whole image is visible */
 }
+    .buffy-links {
+    list-style-type: none; /* This removes the actual bullet dots */
+    padding: 0;            /* This removes the "indent" on the left */
+    margin: 0;             /* This removes extra spacing around the list */
+}
+
+.buffy-links li {
+    margin-bottom: 8px;    /* This adds a little space between your links */
+}
