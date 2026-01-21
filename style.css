@@ -1,95 +1,45 @@
-/* This makes the page readable without changing your original HTML */
+/* 1. GLOBAL STYLES */
 body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    
-    /* Improves the font - standard Mac fonts look great here */
     font-family: "Times New Roman", Times, serif; 
     line-height: 1.6;
-    
-    /* Keeps original black background and brown text color */
     background-color: #000000; 
     color: #8c5e1e;
 }
 
-/* Original link colors from your body tag */
+/* Links */
 a:link { color: #0000ff; }
-a:vlink { color: #ff0000; }
-a:alink { color: #ffff00; }
+a:visited { color: #ff0000; } /* Fixed: 'vlink' is now 'visited' */
+a:active { color: #ffff00; }  /* Fixed: 'alink' is now 'active' */
 a { text-decoration: underline; }
 
-/* Gives images breathing room and handles your align="left/right" tags */
+/* Global Images */
 img {
     margin: 10px;
     max-width: 100%;
     height: auto;
 }
 
-img[align="left"] {
-    margin-right: 20px;
-}
+img[align="left"] { margin-right: 20px; }
+img[align="right"] { margin-left: 20px; }
 
-img[align="right"] {
-    margin-left: 20px;
-}
-
-/* Style for the bloodbar dividers */
+/* 2. PAGE COMPONENTS */
 .divider {
     display: block;
     margin: 40px auto;
     clear: both;
 }
 
-/* Makes those old paragraphs easier to read */
 p {
     margin-bottom: 20px;
-    clear: both; /* Prevents text from getting trapped between images */
+    clear: both; 
 }
 
-/* Ensures the footer/address stays at the bottom */
 address {
     margin-top: 50px;
     font-style: normal;
-    display: block;
-}
-/* Specific styles for the Personal Info page */
-.personal-page {
-    background-image: url('images/backgroundpaper.gif');
-    background-color: #f0e6d2; /* Fallback tan color */
-    color: #000000;
-}
-
-.personal-page a:link { color: #008040; }    /* Green links */
-.personal-page a:visited { color: #000080; } /* Navy links */
-
-.photo-grid {
-    margin: 30px 0;
-    padding: 15px;
-    border: 1px double #333;
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.footer-nav {
-    margin-top: 50px;
-    padding-bottom: 30px;
-}
-/* Buffy Page specific styles */
-.character-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin: 20px 0;
-}
-
-.character-grid img {
-    border: 2px solid #ff0000; /* Red border for a vampire vibe */
-    width: 120px;
-}
-
-.section-title {
-    margin-top: 40px;
     display: block;
 }
 
@@ -101,86 +51,64 @@ blockquote {
     background: #111;
 }
 
-.webring-table {
-    border-color: #8c5e1e;
-    color: #8c5e1e;
-    margin: 40px 0;
+/* 3. THE CHARACTER GRID (One Line Fix) */
+.character-grid {
+    text-align: center;
+    white-space: nowrap;     /* Forces one line */
+    width: 100%;
+    font-size: 0;            /* Removes gaps between images */
+    margin: 20px 0;
 }
 
-.copyright {
-    font-size: 0.8rem;
-    opacity: 0.7;
+.character-grid a {
+    display: inline-block;
+    width: 14%;              /* Sized to fit 6 on one line */
+    margin: 0 1%;
+    vertical-align: bottom;
 }
-/* Mountainbike Page Styles */
+
+.character-grid img {
+    width: 100% !important;  /* Overrides the 120px duplicate */
+    height: auto;
+    border: 2px solid #ff0000; /* Red vampire border */
+}
+
+/* 4. LISTS & LINKS */
+.buffy-links {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.buffy-links li {
+    margin-bottom: 8px;
+}
+
+/* 5. SPECIFIC PAGE THEMES (Personal & MTB) */
+.personal-page {
+    background-image: url('images/backgroundpaper.gif');
+    background-color: #f0e6d2;
+    color: #000000;
+}
+
 .mtb-page {
     background-image: url('images/Leaf-bak.gif');
-    background-color: #000000; /* Fallback */
-    color: #ff0000; /* Bright red text from original */
+    background-color: #000000;
+    color: #ff0000;
 }
 
-/* Link colors for the MTB page */
-.mtb-page a:link { color: #000000; background-color: #888; padding: 0 2px; } /* Black links on grey for readability */
-.mtb-page a:visited { color: #400080; }
-.mtb-page a:hover { color: #ff8000; }
-
-.mtb-page h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.links-container {
-    text-align: left;
+/* 6. RETRO ELEMENTS (Counter & MIDI) */
+.retro-counter {
+    margin-top: 50px;
     display: inline-block;
-    max-width: 600px;
-    margin-top: 30px;
-}
-
-.link-list {
-    list-style-type: square;
-    margin-bottom: 40px;
-}
-
-.link-list li {
-    margin-bottom: 10px;
-}
-
-.home-link {
-    font-size: 1.5rem;
-    text-decoration: none;
-    font-weight: bold;
-}
-.brand-links img {
-    margin: 20px 0;
-    border: 2px solid #000;
-    transition: transform 0.2s;
-}
-
-.brand-links img:hover {
-    transform: scale(1.05); /* A modern touch for the 90s images */
-}
-.midi-controls {
-    margin: 20px 0;
-}
-
-.midi-controls button {
-    background: #4a0000; /* Dark blood red */
-    color: #ffffff;
-    border: 2px outset #8c5e1e; /* Gold/brown border */
-    padding: 10px 20px;
-    font-family: "Courier New", Courier, monospace;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-.midi-controls button:hover {
-    background: #ff0000; /* Bright red on hover */
-    border-style: inset;
-}
+    background: #000;
+    padding: 5px;
+    border: 2px outset #666;
+} /* Fixed: Added missing closing bracket here */
 
 .digit {
     background: #000;
-    color: #00ff00; /* Classic Matrix Green */
+    color: #00ff00;
     font-family: 'Courier New', Courier, monospace;
     font-size: 24px;
     font-weight: bold;
@@ -188,38 +116,11 @@ blockquote {
     border: 1px solid #333;
     margin-right: 1px;
 }
-.retro-counter {
-    margin-top: 50px; /* Adjust this number to add more or less space */
-    display: inline-block;
-    background: #000;
-    padding: 5px;
-    border: 2px outset #666;
-    
-.character-grid {
-    text-align: center;      /* Centers the line of images */
-    white-space: nowrap;     /* The "Magic" line: prevents them from ever jumping to row 2 */
-    width: 100%;             /* Fits the screen width */
-    font-size: 0;            /* Removes the tiny natural gap between inline images */
-}
 
-.character-grid a {
-    display: inline-block;   /* Keeps them side-by-side like the original */
-    width: 14%;              /* 100% divided by 6 characters is ~16%, 14% leaves a little gap */
-    margin: 0 1%;            /* Adds a tiny bit of breathing room */
-    vertical-align: bottom;  /* Keeps their feet on the same 'ground' line */
-}
-
-.character-grid img {
-    width: 100%;             /* Makes the image fill the 14% width of the link */
-    height: auto;            /* Keeps the faces from getting squashed */
-    border: 0;               /* Removes any default blue borders from links */
-}
-    .buffy-links {
-    list-style-type: none; /* This removes the actual bullet dots */
-    padding: 0;            /* This removes the "indent" on the left */
-    margin: 0;             /* This removes extra spacing around the list */
-}
-
-.buffy-links li {
-    margin-bottom: 8px;    /* This adds a little space between your links */
+.midi-controls button {
+    background: #4a0000;
+    color: #ffffff;
+    border: 2px outset #8c5e1e;
+    padding: 10px 20px;
+    cursor: pointer;
 }
