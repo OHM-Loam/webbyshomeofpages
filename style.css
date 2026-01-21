@@ -194,24 +194,26 @@ blockquote {
     background: #000;
     padding: 5px;
     border: 2px outset #666;
+    
 .character-grid {
-    display: flex;
-    justify-content: space-around; /* Distributes them evenly */
-    align-items: flex-end;         /* Aligns them at the bottom */
-    width: 100%;                   /* Keeps it within the screen */
-    max-width: 1200px;             /* Prevents them from getting TOO huge on wide screens */
-    margin: 0 auto;                /* Centers the whole grid */
-    overflow: hidden;              /* Guaranteed no scroll bar */
+    display: flex;          /* The modern way to align items in a row */
+    flex-wrap: nowrap;      /* FORCES them to stay on one line (no wrapping) */
+    justify-content: center;/* Centers the row */
+    align-items: flex-end;  /* Keeps them aligned at the bottom */
+    width: 100%;            /* Keeps the grid within the screen width */
+    gap: 10px;              /* Adjust this to change the space between images */
+    overflow: hidden;       /* Ensures no scrollbars appear */
 }
 
 .character-grid a {
-    flex: 1;                       /* Gives each character equal "weight" */
-    max-width: 15%;                /* Forces them to stay small enough for 1 line */
-    margin: 0 5px;                 /* Tiny gap between them */
+    flex: 1 1 auto;         /* Allows links to grow and shrink equally */
+    min-width: 0;           /* Prevents the images from 'pushing' the box wider */
+    max-width: 150px;       /* Keeps them from getting too huge on big screens */
 }
 
 .character-grid img {
-    width: 100%;                   /* Scales image to the size of the link */
-    height: auto;                  /* Keeps the proportions correct */
-    display: block;
+    width: 100%;            /* Image fills the <a> tag width */
+    height: auto;           /* Maintains original proportions */
+    display: block;         /* Removes the tiny gap at the bottom of images */
+    object-fit: contain;    /* Ensures the whole image is visible */
 }
