@@ -273,4 +273,9 @@ td[bgcolor="#9370DB"] {
     border: 3px double #ff0000;
     margin: 20px 0;
 }
+/* Special 'Hacker' style for the Willow page specifically */
+.buffy-page strong {
+    color: #00ff00; /* Matrix/Terminal Green */
+    text-shadow: 0 0 5px #00ff00;
+}
 
