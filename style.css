@@ -278,4 +278,9 @@ td[bgcolor="#9370DB"] {
     color: #00ff00; /* Matrix/Terminal Green */
     text-shadow: 0 0 5px #00ff00;
 }
-
+/* Make the clickable postcard stand out */
+a[onclick] img:hover {
+    filter: brightness(1.2);
+    box-shadow: 0 0 10px #ff0000;
+    transition: 0.3s;
+}
