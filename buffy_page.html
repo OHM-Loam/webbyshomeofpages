@@ -62,19 +62,18 @@
                     This site owned by <a href="mailto:nstn4356@fox.nstn.ca">Mark Webster</a>.
                     <br>
                     [<a href="#">Prev</a>] [<a href="#">Next</a>] [<script>
-function randomPop() {
-    // Add your list of GIFs here!
-    const gifs = [
-        "images/grrrr.gif"
-    ];
+function showRandomGif() {
+    const gifs = ["images/kennydead.gif", "images/spike-cool.gif", "images/willow-magic.gif"];
     const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
     
-    // Opens a small window 300x300
-    window.open(randomGif, 'popup', 'width=300,height=300,scrollbars=no,resizable=no');
+    // We use the Lightbox "trigger" if you have it installed
+    // Or we can just alert/show a hidden div. 
+    // Here is a simple way to show it in a new tab:
+    window.open(randomGif, '_blank'); 
 }
 </script>
 
-<a href="javascript:void(0)" onclick="randomPop()">[Random]</a>]
+<a href="javascript:void(0)" onclick="showRandomGif()">[Random]</a>]
                 </td>
             </tr>
         </table>
