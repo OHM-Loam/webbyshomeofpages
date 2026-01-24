@@ -61,7 +61,20 @@
                     <strong>Ring Of Slayers</strong><br>
                     This site owned by <a href="mailto:nstn4356@fox.nstn.ca">Mark Webster</a>.
                     <br>
-                    [<a href="#">Prev</a>] [<a href="#">Next</a>] [<a href="#">Random</a>]
+                    [<a href="#">Prev</a>] [<a href="#">Next</a>] [<script>
+function randomPop() {
+    // Add your list of GIFs here!
+    const gifs = [
+        "images/grrrr.gif"
+    ];
+    const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
+    
+    // Opens a small window 300x300
+    window.open(randomGif, 'popup', 'width=300,height=300,scrollbars=no,resizable=no');
+}
+</script>
+
+<a href="javascript:void(0)" onclick="randomPop()">[Random]</a>]
                 </td>
             </tr>
         </table>
