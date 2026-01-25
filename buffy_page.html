@@ -66,19 +66,31 @@
                     <strong>Ring Of Slayers</strong><br>
                     This site owned by <a href="mailto:nstn4356@fox.nstn.ca">Mark Webster</a>.
                     <br>
-                    [<a href="#">Prev</a>] [<a href="#">Next</a>] [<script>
+                    [<a href="#">Prev</a>] [<a href="#">Next</a>] 
+                    
+                    <script>
 function showRandomGif() {
-    const gifs = ["images/grrrr.gif"];
+    const gifs = ["images/grrrr.gif"]; // You can add more later
     const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
     
-    // We use the Lightbox "trigger" if you have it installed
-    // Or we can just alert/show a hidden div. 
-    // Here is a simple way to show it in a new tab:
-    window.open(randomGif, '_blank'); 
+    // 1. Set the image
+    document.getElementById('pop-image').src = randomGif;
+    
+    // 2. Show the overlay
+    document.getElementById('gif-overlay').style.display = 'block';
+    
+    // 3. Play the sound!
+    document.getElementById('grrr-sound').play();
 }
 </script>
 
-<a href="javascript:void(0)" onclick="showRandomGif()">[Random]</a>]
+<audio id="grrr-sound" src="audio/grrr-argh.mp3"></audio>
+
+<div id="gif-overlay" onclick="this.style.display='none'">
+    <img id="pop-image" src="" alt="Random Fun">
+    <p style="color: white; font-family: Courier New, monospace;">Grrr... Argh!</p>
+    <p style="color: gray; font-size: 0.8em;">(Click to close)</p>
+</div>]
                 </td>
             </tr>
         </table>
