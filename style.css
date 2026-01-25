@@ -284,3 +284,20 @@ a[onclick] img:hover {
     box-shadow: 0 0 10px #ff0000;
     transition: 0.3s;
 }
+/* The background overlay */
+#gif-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8); /* Dim the background */
+    z-index: 1000;
+    text-align: center;
+}
+
+/* The actual image in the middle */
+#gif-overlay img {
+    margin-top: 15%;
+    border: 5px solid #ff0000;
+    cursor: pointer;
+}
