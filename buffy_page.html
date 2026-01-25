@@ -60,40 +60,36 @@
             </ul>
         </section>
 
-        <table border="5" cellpadding="10" class="webring-table">
-            <tr>
-                <td>
-                    <strong>Ring Of Slayers</strong><br>
-                    This site owned by <a href="mailto:nstn4356@fox.nstn.ca">Mark Webster</a>.
-                    <br>
-                    [<a href="#">Prev</a>] [<a href="#">Next</a>] 
-                    
-                    <script>
-function showRandomGif() {
-    const gifs = ["images/grrrr.gif"]; // You can add more later
-    const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
-    
-    // 1. Set the image
-    document.getElementById('pop-image').src = randomGif;
-    
-    // 2. Show the overlay
-    document.getElementById('gif-overlay').style.display = 'block';
-    
-    // 3. Play the sound!
-    document.getElementById('grrr-sound').play();
-}
-</script>
+  <table border="5" cellpadding="10" class="webring-table">
+    <tr>
+        <td>
+            <strong>Ring Of Slayers</strong><br>
+            This site owned by <a href="mailto:nstn4356@fox.nstn.ca">Mark Webster</a>.<br>
+            
+            [<a href="#">Prev</a>] 
+            [<a href="javascript:void(0)" onclick="showRandomGif()">Random</a>] 
+            [<a href="#">Next</a>] 
+        </td>
+    </tr>
+</table>
 
-<audio id="grrr-sound" src="audio/grrr-argh.mp3"></audio>
+<audio id="grrr-sound" src="images/grrr.mp3"></audio>
 
 <div id="gif-overlay" onclick="this.style.display='none'">
     <img id="pop-image" src="" alt="Random Fun">
     <p style="color: white; font-family: Courier New, monospace;">Grrr... Argh!</p>
     <p style="color: gray; font-size: 0.8em;">(Click to close)</p>
-</div>]
-                </td>
-            </tr>
-        </table>
+</div>
+
+<script>
+function showRandomGif() {
+    const gifs = ["images/grrrr.gif"]; 
+    const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
+    document.getElementById('pop-image').src = randomGif;
+    document.getElementById('gif-overlay').style.display = 'block';
+    document.getElementById('grrr-sound').play();
+}
+</script>
 
         <footer>
             <p><a href="index.html">Back to Main Page</a></p>
