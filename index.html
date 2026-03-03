@@ -92,8 +92,15 @@
         <img src="images/titlefavouritelinksblkback.gif" alt="favourite links">
 
         <p><a href="buffy_page.html">Buffy The Vampire Slayer Links</a></p>
-        <a href="http://www.cat.nyu.edu/tkbalt/salingers/"><img src="images/po5.gif" alt="Pof 5"></a>
-        <p><a href="http://home.att.net/~TucketInn">The Page That Hooks You Up</a></p>
+        <a href="https://youtu.be/AW_6EgFCwqU?si=cPuc_HIfodFhZLn2"><img src="images/po5.gif" alt="Pof 5"></a>
+        <p>
+    <a href="javascript:void(0)" 
+       onclick="ghostAlert()" 
+       class="haunted-link" 
+       title="This link is... tuckered out.">
+       The Page That Hooks You Up
+    </a>
+</p>
         <p><a href="http://www.brain.com/welcome.html">The Braintainment Center</a></p>
         <p><a href="javascript:void(0)" onclick="playMtbVideo()">Mountain Bike Links</a></p>
        <div id="video-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 10000; text-align: center;" onclick="stopVideo()">
@@ -223,6 +230,16 @@ function stopVideo() {
     video.pause();
     video.currentTime = 0; // Resets video to the start
     overlay.style.display = 'none';
+}
+    function ghostAlert() {
+    // A little sound effect if you want to reuse your grrr-sound
+    document.getElementById('grrr-sound').play();
+
+    alert("SPIRITUAL INTERFERENCE DETECTED\n" +
+          "------------------------------\n" +
+          "TucketInn was dusted circa 2009.\n\n" +
+          "The server has moved on to a higher plane (or a basement in New Jersey).\n" +
+          "Please stop poking the remains.");
 }
 </script>
 </body>
