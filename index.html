@@ -93,11 +93,10 @@
 
         <p><a href="buffy_page.html">Buffy The Vampire Slayer Links</a></p>
         <a href="https://youtu.be/AW_6EgFCwqU?si=cPuc_HIfodFhZLn2"><img src="images/po5.gif" alt="Pof 5"></a>
-        <p>
+   <p>
     <a href="javascript:void(0)" 
        onclick="ghostAlert()" 
-       class="haunted-link" 
-       title="This link is... tuckered out.">
+       class="haunted-link">
        The Page That Hooks You Up
     </a>
 </p>
@@ -231,14 +230,20 @@ function stopVideo() {
     video.currentTime = 0; // Resets video to the start
     overlay.style.display = 'none';
 }
-    function ghostAlert() {
-    // A little sound effect if you want to reuse your grrr-sound
-    document.getElementById('grrr-sound').play();
+function ghostAlert() {
+    console.log("Ghost link clicked!"); // This helps us debug!
 
+    // Play the sound if it exists
+    var sound = document.getElementById('grrr-sound');
+    if (sound) {
+        sound.play();
+    }
+
+    // Show the message
     alert("SPIRITUAL INTERFERENCE DETECTED\n" +
           "------------------------------\n" +
           "TucketInn was dusted circa 2009.\n\n" +
-          "The server has moved on to a higher plane (or a basement in New Jersey).\n" +
+          "The server has moved on to a higher plane.\n" +
           "Please stop poking the remains.");
 }
 </script>
