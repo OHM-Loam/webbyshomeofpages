@@ -301,3 +301,25 @@ a[onclick] img:hover {
     border: 5px solid #ff0000;
     cursor: pointer;
 }
+
+/* The Shiver Effect */
+@keyframes shiver {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  20% { transform: translate(-1px, -2px) rotate(-1px); }
+  40% { transform: translate(-3px, 0px) rotate(1px); }
+  60% { transform: translate(3px, 2px) rotate(0deg); }
+  80% { transform: translate(1px, -1px) rotate(1px); }
+  100% { transform: translate(-1px, 2px) rotate(-1px); }
+}
+
+.haunted-link {
+    color: #888 !important; /* Faded gray */
+    text-decoration: none;
+    display: inline-block; /* Required for transform to work */
+}
+
+.haunted-link:hover {
+    color: #ff0000 !important; /* Turns blood red on hover */
+    animation: shiver 0.3s infinite; /* Starts shaking */
+    cursor: help; /* Changes cursor to a question mark */
+}
